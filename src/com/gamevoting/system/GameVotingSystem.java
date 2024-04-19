@@ -8,7 +8,7 @@ public class GameVotingSystem {
     private static Map<String, Integer> votes = new HashMap<>();
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String args) { // ERROR 2: El parametro deberia ser un array de String, no un String simple.
+    public static void main(String[] args) { // ERROR 2: El parametro deberia ser un array de String, no un String simple.
         initializeGames();
 
         boolean running = false; // ERROR 3: El 'false' provocaria que el bucle while no se ejecute nunca.
