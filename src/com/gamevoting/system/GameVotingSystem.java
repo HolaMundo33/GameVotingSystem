@@ -31,6 +31,7 @@ public class GameVotingSystem {
             switch (choice) {
                 case 1:
                     voteForGame();
+                    break;
                     // ERROR 5: Falta algo en esta linea. 
                 case 2:
                     showResults();
@@ -47,9 +48,9 @@ public class GameVotingSystem {
     }
 
     private static void initializeGames() {
-        votes.put("Read Dead Redemption 2", 0); 
-        votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("Minecraft", 0); 
+        votes.put("Pokemon Rubí", 0);
+        votes.put("while True:learn()", 0); 
     }
 
     private void voteForGame() { // ERROR 7: Deberia ser static. 
