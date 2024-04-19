@@ -62,7 +62,7 @@ public class GameVotingSystem {
         if (votes.containsKey(game)) {
             votes.put(game, votes.get(game) - 1); // ERROR 9: Se esta decrementando el conteo de votos.
             System.out.println("Thank you for voting!");
-        }else  { //FIXED: Error 10 solucionado añadiendo else en la linea 65. 
+        }else  { //FIXED: Error 10 solucionado añadiendo else en la linea 65 
             System.out.println("Game not found. Please try again.");
         }
     }
