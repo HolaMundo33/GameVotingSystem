@@ -47,9 +47,9 @@ public class GameVotingSystem {
     }
 
     private static void initializeGames() {
-        votes.put("Read Dead Redemption 2", 0); 
-        votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("Minecraft", 0); 
+        votes.put("Halo 3", 0);
+        votes.put("Apex Legends", 0); 
     }
 
     private void voteForGame() { // ERROR 7: Deberia ser static. 
@@ -69,8 +69,9 @@ public class GameVotingSystem {
 
     private static showResults() { //ERROR 11: Falta el tipo void. 
         if (votes.isEmpty())  {
-            System.out.println("All games have received votes."); //ERROR 12: Mensaje incorrecto si no se han emitido votos.
+            System.out.println("No game has received votes."); //ERROR 12: Mensaje incorrecto si no se han emitido votos.
             return; 
+            //Se ha corregido el mensaje, ya que la variable 'votos' está vacía, por lo que no se ha emitido ningún voto.
         }
         System.out.println("Current Voting Results:");
         for (Map.Entry<String, Integer> entry : votes.entrySet()) {
