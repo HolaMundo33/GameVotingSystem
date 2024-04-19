@@ -3,6 +3,8 @@
 package com.gamevoting.system;
 import java.util.HashMap;
 // ERROR 1: Falta importar java.util.Map y java.util.Scanner.
+import java.util.Map;
+import java.util.Scanner;
 
 public class GameVotingSystem {
     private static Map<String, Integer> votes = new HashMap<>();
@@ -18,7 +20,7 @@ public class GameVotingSystem {
             System.out.println("2. Show voting results");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            string choice = 0; //ERROR 4: Tipo de dato incorrecto. 
+            int choice = 0; //ERROR 4: Tipo de dato incorrecto. 
             try {
                 choice = scanner.nextInt();
                 scanner.nextLine(); 
@@ -47,15 +49,15 @@ public class GameVotingSystem {
     }
 
     private static void initializeGames() {
-        votes.put("Read Dead Redemption 2", 0); 
-        votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("F1 2010", 0); 
+        votes.put("FIFA 21", 0);
+        votes.put("NBA 2K23", 0); 
     }
 
-    private void voteForGame() { // ERROR 7: Deberia ser static. 
+    private static void voteForGame() { // ERROR 7: Deberia ser static. 
         System.out.println("Available games:");
         for (String game : votes.keySet()) {
-            System.out.println(game) //ERROR 8: Aqui falta algo. 
+            System.out.println(game); //ERROR 8: Aqui falta algo. 
         }
         System.out.print("Enter the name of the game you want to vote for: ");
         String game = scanner.nextLine().trim();
@@ -67,7 +69,7 @@ public class GameVotingSystem {
         }
     }
 
-    private static showResults() { //ERROR 11: Falta el tipo void. 
+    private static void showResults() { //ERROR 11: Falta el tipo void. 
         if (votes.isEmpty())  {
             System.out.println("All games have received votes."); //ERROR 12: Mensaje incorrecto si no se han emitido votos.
             return; 
@@ -78,4 +80,5 @@ public class GameVotingSystem {
         }
    
     // ERROR 14: Aqui falta algo. 
+    }
 }
