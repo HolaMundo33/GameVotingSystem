@@ -18,7 +18,7 @@ public class GameVotingSystem {
             System.out.println("2. Show voting results");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            string choice = 0; //ERROR 4: Tipo de dato incorrecto. 
+            int choice = 0; //CORRECCION DEL ERROR 4: Lo corrijo cambiando el tipo String que previamente tenía a tipo int
             try {
                 choice = scanner.nextInt();
                 scanner.nextLine(); 
@@ -47,9 +47,9 @@ public class GameVotingSystem {
     }
 
     private static void initializeGames() {
-        votes.put("Read Dead Redemption 2", 0); 
-        votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("Bioshock", 0); 
+        votes.put("Golden Sun", 0);
+        votes.put("Kingdom Hearts", 0); 
     }
 
     private void voteForGame() { // ERROR 7: Deberia ser static. 
