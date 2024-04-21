@@ -52,8 +52,8 @@ public class GameVotingSystem {
         votes.put("Fortnite", 0); 
     }
 
-    private void voteForGame() { // ERROR 7: Deberia ser static. 
-        System.out.println("Available games:");
+    private static void voteForGame() { // ERROR 7: Deberia ser static. 
+        System.out.println("Available games: ");
         for (String game : votes.keySet()) {
             System.out.println(game) //ERROR 8: Aqui falta algo. 
         }
