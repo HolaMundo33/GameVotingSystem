@@ -2,8 +2,6 @@
 
 package com.gamevoting.system;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
 // ERROR 1: Falta importar java.util.Map y java.util.Scanner.
 
 public class GameVotingSystem {
