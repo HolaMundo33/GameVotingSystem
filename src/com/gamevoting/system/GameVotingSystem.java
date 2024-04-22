@@ -47,9 +47,9 @@ public class GameVotingSystem {
     }
 
     private static void initializeGames() {
-        votes.put("Read Dead Redemption 2", 0); 
-        votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("Pokemon", 0); 
+        votes.put("GTA San Andreas", 0);
+        votes.put("Unturned Roleplay", 0); 
     }
 
     private void voteForGame() { // ERROR 7: Deberia ser static. 
@@ -67,7 +67,7 @@ public class GameVotingSystem {
         }
     }
 
-    private static showResults() { //ERROR 11: Falta el tipo void. 
+    private static void showResults() { //ERROR 11: Falta el tipo void. 
         if (votes.isEmpty())  {
             System.out.println("All games have received votes."); //ERROR 12: Mensaje incorrecto si no se han emitido votos.
             return; 
