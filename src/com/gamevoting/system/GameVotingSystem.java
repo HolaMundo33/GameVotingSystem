@@ -38,7 +38,8 @@ public class GameVotingSystem {
                 case 3:
                     running = false;
                     break;
-                case 4: // ERROR 6: La opción 4 no se contempla en el menu, el mensaje que se muestra se corresponde con un default. 
+                default: // ERROR 6: La opción 4 no se contempla en el menu, el mensaje que se muestra se corresponde con un default. 
+                	//Cambiamos "case 4" por default para que sea la salida por defecto
                     System.out.println("Invalid option. Please try again.");
             }
         }
@@ -47,9 +48,9 @@ public class GameVotingSystem {
     }
 
     private static void initializeGames() {
-        votes.put("Read Dead Redemption 2", 0); 
-        votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("Elden Ring", 0); 
+        votes.put("Overcooked", 0);
+        votes.put("Cyberpunk", 0); 
     }
 
     private void voteForGame() { // ERROR 7: Deberia ser static. 
