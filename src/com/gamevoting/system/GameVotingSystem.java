@@ -11,7 +11,7 @@ public class GameVotingSystem {
     public static void main(String args) { // ERROR 2: El parametro deberia ser un array de String, no un String simple.
         initializeGames();
 
-        boolean running = false; // ERROR 3: El 'false' provocaria que el bucle while no se ejecute nunca.
+        boolean running = true; // Corrección del ERROR 3: Ahora el bucle while se ejecutará.
         while (running) {
             System.out.println("\nWelcome to the Game Voting System!");
             System.out.println("1. Vote for your favorite game");
