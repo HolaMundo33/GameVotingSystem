@@ -49,7 +49,7 @@ public class GameVotingSystem {
     private static void initializeGames() {
         votes.put("Read Dead Redemption 2", 0); 
         votes.put("Dark Souls", 0);
-        votes.put("Fortnite", 0); 
+        votes.put("Fallout 4", 0); 
     }
 
     private void voteForGame() { // ERROR 7: Deberia ser static. 
@@ -60,7 +60,7 @@ public class GameVotingSystem {
         System.out.print("Enter the name of the game you want to vote for: ");
         String game = scanner.nextLine().trim();
         if (votes.containsKey(game)) {
-            votes.put(game, votes.get(game) - 1); // ERROR 9: Se esta decrementando el conteo de votos.
+            votes.put(game, votes.get(game) + 1); // Corrección 9: Incrementar el conteo de votos
             System.out.println("Thank you for voting!");
         }  { //ERROR 10: Falta 'else'. 
             System.out.println("Game not found. Please try again.");
